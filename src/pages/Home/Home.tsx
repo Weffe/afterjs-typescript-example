@@ -1,6 +1,6 @@
+import { Ctx } from '@typings/types';
 import * as React from 'react';
 import { Link } from 'react-router-dom';
-import { Ctx } from '../typings';
 import './Home.css';
 import logo from './react.svg';
 

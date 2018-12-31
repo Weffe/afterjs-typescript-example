@@ -1,13 +1,13 @@
 import { asyncComponent } from '@jaredpalmer/after';
 import { RouteProps } from 'react-router';
-import Placeholder from './Placeholder';
+import Placeholder from './components/Placeholder';
 
 const routes: RouteProps[] = [
   {
     path: '/',
     exact: true,
     component: asyncComponent({
-      loader: () => import('./Home'), // required
+      loader: () => import('./pages/Home/'), // required
       Placeholder
     }),
   },
@@ -15,7 +15,7 @@ const routes: RouteProps[] = [
     path: '/about',
     exact: true,
     component: asyncComponent({
-      loader: () => import('./About'), // required
+      loader: () => import('./pages/About/'), // required
       Placeholder
     }),
   },
@@ -23,7 +23,7 @@ const routes: RouteProps[] = [
     path: '/user/:id',
     exact: true,
     component: asyncComponent({
-      loader: () => import('./User'), // required
+      loader: () => import('./pages/User/'), // required
       Placeholder
     }),
   },
