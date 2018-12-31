@@ -7,6 +7,7 @@ const routes: RouteProps[] = [
     path: '/',
     exact: true,
     component: asyncComponent({
+      // make sure the Home folder has a index.ts that re-exports the page component or else use the full path
       loader: () => import('./pages/Home/'), // required
       Placeholder
     }),
